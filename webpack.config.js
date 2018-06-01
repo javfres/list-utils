@@ -5,7 +5,11 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry: {
         app: ['./src/app.scss','./src/app.js','./src/index.html'],
-        vendor: ["jquery", "lodash"],
+        vendor: [
+            "jquery", "lodash",
+            "./node_modules/skeleton-css/css/skeleton.css",
+            "./node_modules/skeleton-css/css/normalize.css"
+        ],
     },
     output: {
         filename: '[name].js',
@@ -15,7 +19,7 @@ module.exports = {
         
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.(css|scss)$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader', 'sass-loader']
                 }),
@@ -48,7 +52,7 @@ module.exports = {
 
     },
     plugins: [
-        new ExtractTextPlugin('app.css'),
+        new ExtractTextPlugin('[name].css'),
     ],
     
     

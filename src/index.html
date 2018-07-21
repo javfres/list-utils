@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utils</title>
-    <link rel="stylesheet" href="vendor.css">
-	<link rel="stylesheet" href="app.css">
-  </head>
-  <body>
-      
-      
-    <div class="container">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Utils</title>
 
-        <div class="row">
-            <div class="column">
-            
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122703378-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-122703378-1');
+        </script>
+
+        <!-- Load my stiles -->
+        <link rel="stylesheet" href="vendor.css">
+        <link rel="stylesheet" href="app.css">
+    </head>
+      
+    <!-- BODY -->
+    <body>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="column">
+
                 <h1>List Utils</h1>
+
+                <p>Small utilities to handle list of strings</p>
+
+                <p>Load test name list
+                    <a href="#" id="a_random_names">Load</a>.
+                    Load test table
+                    <a href="#" id="a_random_table">Load</a>.
+
+                </p>
                 
-                <p>Small utilities to handle text list of items</p>
                 
+
+                </div>
             </div>
-        </div>
 
-    <div class="row">
-        <div class="column">
-        
-            <textarea id="textarea"></textarea>
+            <div class="row">
+                <div class="column">
+                    <textarea id="textarea"></textarea>
+                </div>
+            </div>
 
-        </div>
-    </div>
+            <!-- Actions -->
+            <div class="row">
+                <div class="column">
+                    <button id="b_sameline">List same line</button>
+                    <button id="b_incolumn">List in column</button>
+                    <button id="b_tosql">List to SQL</button>
+                    <button id="b_fromsql">List from SQL</button>
+                    <button id="b_sort">Sort list</button>
+                    <button id="b_unique">Unique list</button>
 
-    <div class="row">
-        <div class="column">
-        
-            <button id="b_sameline">List same line</button>
-            <button id="b_incolumn">List in column</button>
-            <button id="b_tosql">List to SQL</button>
-            <button id="b_fromsql">List from SQL</button>
-            <button id="b_sort">Sort list</button>
-            <button id="b_unique">Unique list</button>
+                    <br>
+                    <button id="b_tabs2table">Tabs 2 fixed table</button>
+                </div>
+            </div>
 
-            <br>
+        </div> <!-- container -->
 
-            <button id="b_tabs2table">Tabs 2 fixed table</button>
-            
-        </div>
-    </div>
-
-
-    </div>
-
-
-      
-      
-
-
-
-
-
-
-
-      
-      
-      
-    <script src="vendor.js"></script>
-    <script src="app.js"></script>
-  </body>
+        <!-- Scripts -->
+        <script src="vendor.js"></script>
+        <script src="app.js"></script>
+    </body>
 </html>

@@ -4,7 +4,7 @@ const STR_PAD_LEFT  = 1;
 const STR_PAD_RIGHT = 2;
 const STR_PAD_BOTH  = 3;
 
-function pad(str, len=0, pad=' ', dir=STR_PAD_RIGHT) {
+export default function pad(str, len=0, pad=' ', dir=STR_PAD_RIGHT) {
 
     if (len + 1 >= str.length) {
 
